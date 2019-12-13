@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: good-server
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///1703a?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+eureka:
+  client:
+    fetch-registry: false   #从注册中心拉出注册列表
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  file: d:/log/good-springboot.log
+  level:
+    com.wxy.dao: debug
